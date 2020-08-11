@@ -3,6 +3,10 @@
   outline: none;
 }
 
+body {
+  overflow-y: scroll;
+}
+
 body,
 input,
 button,
@@ -27,4 +31,12 @@ a:focus {
   background-position: center right;
   background-size: cover;
   height: 380px;
+}
+
+.title {
+  color: #777777;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
 }
