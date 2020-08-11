@@ -17,6 +17,65 @@
     />
 
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/block/topbar.css" />
   </head>
-  <body></body>
+  <body>
+    <aside id="topbar" class="p-2 border-bottom">
+      <div
+        class="container-xl d-flex justify-content-between align-items-center"
+      >
+        <form class="px-2 border d-flex justify-content-between w-100">
+          <input
+            type="text"
+            placeholder="O que precisa?"
+            class="form-control-sm border-0 bg-transparent w-100 h-auto"
+          />
+          <button type="submit" aria-label="Buscar" class="btn btn-sm p-0">
+            <img src="./assets/img/icons/search.png" alt="Ícone de busca" />
+          </button>
+        </form>
+
+        <ul id="topbar-list" class="list-unstyled d-flex m-0">
+          <li>
+            <a href="mailto:contato@meuimpresso.com.br">
+              <img src="./assets/img/icons/mail.png" alt="Ícone de e-mail" />
+              <span>contato@meuimpresso.com.br</span>
+            </a>
+          </li>
+          <li>
+            <div class="mr-2">
+              <img src="./assets/img/icons/phone.png" alt="Ícone de telefone" />
+              <span>(31) 1234-5678</span>
+            </div>
+            <a href="https://wa.me/553198765-4321?text=Oi" target="_blank">
+              <img
+                src="./assets/img/icons/whatsapp.png"
+                alt="Ícone de whatsapp"
+              />
+              <span>(31) 98765-4321</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="mr-2">
+              <span>Minha Conta</span>
+              <img
+                src="./assets/img/icons/account.png"
+                alt="Ícone de usuário"
+              />
+            </a>
+            <a href="#">
+              <span>Carrinho</span>
+              <div id="topbar-cart">
+                <img
+                  src="./assets/img/icons/cart.png"
+                  alt="Ícone de carrinho de compras"
+                />
+                <span id="topbar-cart-amount">0</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+  </body>
 </html>

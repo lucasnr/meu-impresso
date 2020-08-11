@@ -1,0 +1,54 @@
+#topbar form {
+  border-radius: 999px;
+  max-width: 350px;
+}
+
+#topbar form button {
+  box-shadow: none !important;
+}
+
+#topbar #topbar-list {
+  color: #777777;
+  font-size: 14px;
+}
+
+#topbar #topbar-list li,
+#topbar #topbar-list li > a,
+#topbar #topbar-list li > div {
+  display: flex;
+}
+
+#topbar #topbar-list li + li {
+  margin-left: 14px;
+}
+
+#topbar #topbar-list li + li::before {
+  background-color: #777777;
+  border-radius: 50%;
+  content: '';
+  display: block;
+  height: 5px;
+  margin: auto;
+  margin-right: 14px;
+  width: 5px;
+}
+
+#topbar #topbar-cart {
+  position: relative;
+}
+
+#topbar #topbar-cart #topbar-cart-amount {
+  align-items: center;
+  background-color: #fd4242;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  font-size: 8px;
+  font-weight: 600;
+  height: 12px;
+  justify-content: center;
+  position: absolute;
+  right: -14%;
+  top: 0;
+  width: 12px;
+}
