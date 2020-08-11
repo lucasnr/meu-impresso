@@ -1,0 +1,13 @@
+#navbar .btn {
+  color: #fff;
+  background-color: #fab914;
+  border-radius: 999px;
+  box-shadow: none !important;
+  font-weight: 600;
+}
+
+#navbar .nav .nav-link {
+  color: #777777;
+  padding-left: 32px;
+  padding-right: 32px;
+}
