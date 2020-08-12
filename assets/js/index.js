@@ -1,6 +1,6 @@
 (function () {
   const navbar = $('#navbar');
-  const nav = navbar.find('nav');
+  const nav = navbar.find('#tabs');
   navbar.mouseenter(() => {
     nav.css('display', 'block');
   });

@@ -1,0 +1,19 @@
+#header {
+  background-image: url(../img/banner.png);
+  background-position: calc(-1075px + 100vw) center;
+  background-size: cover;
+  height: 380px;
+}
+
+@media (max-width: 395px) {
+  #header {
+    height: 95vw;
+    background-position: 135vw;
+  }
+}
+
+@media (min-width: 1000px) {
+  #header {
+    background-position: center right;
+  }
+}

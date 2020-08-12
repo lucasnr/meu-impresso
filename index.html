@@ -21,13 +21,17 @@
     <link rel="stylesheet" href="./assets/css/block/navbar.css" />
     <link rel="stylesheet" href="./assets/css/block/highlights.css" />
     <link rel="stylesheet" href="./assets/css/block/howto.css" />
+
+    <link rel="stylesheet" href="./assets/css/index.css" />
   </head>
   <body>
     <aside id="topbar" class="p-2 border-bottom">
       <div
-        class="container-xl d-flex justify-content-between align-items-center"
+        class="container-xl d-md-flex justify-content-between align-items-center"
       >
-        <form class="px-2 border d-flex justify-content-between w-100">
+        <form
+          class="px-2 border rounded-pill d-flex justify-content-between flex-grow-1 mb-2 mb-md-0 mr-md-2"
+        >
           <input
             type="text"
             placeholder="O que precisa?"
@@ -38,7 +42,7 @@
           </button>
         </form>
 
-        <ul id="topbar-list" class="list-unstyled d-flex m-0">
+        <ul id="topbar-list" class="list-unstyled d-sm-flex m-0">
           <li>
             <a href="mailto:contato@meuimpresso.com.br">
               <img src="./assets/img/icons/mail.png" alt="Ícone de e-mail" />
@@ -55,19 +59,19 @@
                 src="./assets/img/icons/whatsapp.png"
                 alt="Ícone de whatsapp"
               />
-              <span>(31) 98765-4321</span>
+              <span class="d-sm-none d-lg-inline">(31) 98765-4321</span>
             </a>
           </li>
-          <li>
+          <li class="justify-content-end">
             <a href="#" class="mr-2">
-              <span>Minha Conta</span>
+              <span class="d-sm-none d-lg-inline">Minha Conta</span>
               <img
                 src="./assets/img/icons/account.png"
                 alt="Ícone de usuário"
               />
             </a>
             <a href="#">
-              <span>Carrinho</span>
+              <span class="d-sm-none d-xl-inline">Carrinho</span>
               <div id="topbar-cart">
                 <img
                   src="./assets/img/icons/cart.png"
@@ -81,13 +85,13 @@
       </div>
     </aside>
 
-    <navbar id="navbar" class="navbar">
-      <div class="container-xl position-relative">
-        <a href="#" class="navbar-brand p-0 pl-4">
+    <nav id="navbar" class="navbar position-relative">
+      <div class="container-xl">
+        <a href="#" class="navbar-brand p-0 pl-xl-4 d-none d-md-block">
           <img src="./assets/img/logo.png" alt="Logomarca da Meu Impresso" />
         </a>
 
-        <button type="button" class="btn pl-3 pr-4 text-uppercase">
+        <button type="button" class="btn pl-3 pr-4 my-2 my-md-0 text-uppercase">
           <svg style="width: 22px; height: 22px;" viewBox="0 0 24 24">
             <path
               fill="currentColor"
@@ -97,113 +101,115 @@
           <span>Personalize aqui</span>
         </button>
 
-        <ul class="nav text-uppercase font-weight-bold">
+        <ul
+          class="nav justify-content-between justify-sm-content-center justify-content-lg-start text-uppercase font-weight-bold"
+        >
           <li class="nav-item">
             <a href="#" class="nav-link">Como funciona</a>
           </li>
           <li class="nav-item"><a href="#" class="nav-link">A empresa</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Suporte</a></li>
         </ul>
+      </div>
 
-        <nav class="w-100 mt-2 overflow-hidden">
-          <div class="row m-0">
-            <ul
-              class="list-unstyled col-2 p-4 m-0 border-right"
-              id="tab-controls"
-            >
-              <li data-tab-id="tab-1" class="active">Embalagens</li>
-              <li data-tab-id="tab-2">Album</li>
-              <li data-tab-id="tab-3">Calendário</li>
-              <li data-tab-id="tab-4">Convites</li>
-              <li data-tab-id="tab-5">Livros</li>
-              <li data-tab-id="tab-6">Papelaria</li>
-            </ul>
+      <div id="tabs" class="w-100 overflow-hidden container-xl">
+        <div class="row m-0">
+          <ul
+            class="list-unstyled col-4 col-md-3 col-lg-2 p-3 p-sm-4 m-0 border-right"
+            id="tab-controls"
+          >
+            <li data-tab-id="tab-1" class="active">Embalagens</li>
+            <li data-tab-id="tab-2">Album</li>
+            <li data-tab-id="tab-3">Calendário</li>
+            <li data-tab-id="tab-4">Convites</li>
+            <li data-tab-id="tab-5">Livros</li>
+            <li data-tab-id="tab-6">Papelaria</li>
+          </ul>
 
-            <div class="col-10 p-4 mb-auto">
-              <h4 id="tab-title">Embalagens</h4>
+          <div class="col-8 col-md-9 col-lg-10 p-3 p-sm-4 mb-auto">
+            <h4 id="tab-title">Embalagens</h4>
 
-              <div id="tab-1" class="tab active">
-                <ul class="tab-list">
-                  <li><a href="#">Cartão de visita</a></li>
-                  <li><a href="#">Papel timbrado</a></li>
-                  <li><a href="#">Agendas</a></li>
-                  <li><a href="#">Envelopes</a></li>
-                  <li><a href="#">Bloco de notas</a></li>
-                  <li><a href="#">Pasta</a></li>
-                  <li><a href="#">Cadernos</a></li>
-                  <li><a href="#">Adesivos</a></li>
-                </ul>
-              </div>
+            <div id="tab-1" class="tab active">
+              <ul class="tab-list">
+                <li><a href="#">Cartão de visita</a></li>
+                <li><a href="#">Papel timbrado</a></li>
+                <li><a href="#">Agendas</a></li>
+                <li><a href="#">Envelopes</a></li>
+                <li><a href="#">Bloco de notas</a></li>
+                <li><a href="#">Pasta</a></li>
+                <li><a href="#">Cadernos</a></li>
+                <li><a href="#">Adesivos</a></li>
+              </ul>
+            </div>
 
-              <div id="tab-2" class="tab">
-                <ul class="tab-list">
-                  <li><a href="#">Cartão de visita</a></li>
-                  <li><a href="#">Papel timbrado</a></li>
-                  <li><a href="#">Agendas</a></li>
-                  <li><a href="#">Envelopes</a></li>
-                  <li><a href="#">Bloco de notas</a></li>
-                  <li><a href="#">Pasta</a></li>
-                  <li><a href="#">Cadernos</a></li>
-                  <li><a href="#">Adesivos</a></li>
-                </ul>
-              </div>
+            <div id="tab-2" class="tab">
+              <ul class="tab-list">
+                <li><a href="#">Cartão de visita</a></li>
+                <li><a href="#">Papel timbrado</a></li>
+                <li><a href="#">Agendas</a></li>
+                <li><a href="#">Envelopes</a></li>
+                <li><a href="#">Bloco de notas</a></li>
+                <li><a href="#">Pasta</a></li>
+                <li><a href="#">Cadernos</a></li>
+                <li><a href="#">Adesivos</a></li>
+              </ul>
+            </div>
 
-              <div id="tab-3" class="tab">
-                <ul class="tab-list">
-                  <li><a href="#">Cartão de visita</a></li>
-                  <li><a href="#">Papel timbrado</a></li>
-                  <li><a href="#">Agendas</a></li>
-                  <li><a href="#">Envelopes</a></li>
-                  <li><a href="#">Bloco de notas</a></li>
-                  <li><a href="#">Pasta</a></li>
-                  <li><a href="#">Cadernos</a></li>
-                  <li><a href="#">Adesivos</a></li>
-                </ul>
-              </div>
+            <div id="tab-3" class="tab">
+              <ul class="tab-list">
+                <li><a href="#">Cartão de visita</a></li>
+                <li><a href="#">Papel timbrado</a></li>
+                <li><a href="#">Agendas</a></li>
+                <li><a href="#">Envelopes</a></li>
+                <li><a href="#">Bloco de notas</a></li>
+                <li><a href="#">Pasta</a></li>
+                <li><a href="#">Cadernos</a></li>
+                <li><a href="#">Adesivos</a></li>
+              </ul>
+            </div>
 
-              <div id="tab-4" class="tab">
-                <ul class="tab-list">
-                  <li><a href="#">Cartão de visita</a></li>
-                  <li><a href="#">Papel timbrado</a></li>
-                  <li><a href="#">Agendas</a></li>
-                  <li><a href="#">Envelopes</a></li>
-                  <li><a href="#">Bloco de notas</a></li>
-                  <li><a href="#">Pasta</a></li>
-                  <li><a href="#">Cadernos</a></li>
-                  <li><a href="#">Adesivos</a></li>
-                </ul>
-              </div>
+            <div id="tab-4" class="tab">
+              <ul class="tab-list">
+                <li><a href="#">Cartão de visita</a></li>
+                <li><a href="#">Papel timbrado</a></li>
+                <li><a href="#">Agendas</a></li>
+                <li><a href="#">Envelopes</a></li>
+                <li><a href="#">Bloco de notas</a></li>
+                <li><a href="#">Pasta</a></li>
+                <li><a href="#">Cadernos</a></li>
+                <li><a href="#">Adesivos</a></li>
+              </ul>
+            </div>
 
-              <div id="tab-5" class="tab">
-                <ul class="tab-list">
-                  <li><a href="#">Cartão de visita</a></li>
-                  <li><a href="#">Papel timbrado</a></li>
-                  <li><a href="#">Agendas</a></li>
-                  <li><a href="#">Envelopes</a></li>
-                  <li><a href="#">Bloco de notas</a></li>
-                  <li><a href="#">Pasta</a></li>
-                  <li><a href="#">Cadernos</a></li>
-                  <li><a href="#">Adesivos</a></li>
-                </ul>
-              </div>
+            <div id="tab-5" class="tab">
+              <ul class="tab-list">
+                <li><a href="#">Cartão de visita</a></li>
+                <li><a href="#">Papel timbrado</a></li>
+                <li><a href="#">Agendas</a></li>
+                <li><a href="#">Envelopes</a></li>
+                <li><a href="#">Bloco de notas</a></li>
+                <li><a href="#">Pasta</a></li>
+                <li><a href="#">Cadernos</a></li>
+                <li><a href="#">Adesivos</a></li>
+              </ul>
+            </div>
 
-              <div id="tab-6" class="tab">
-                <ul class="tab-list">
-                  <li><a href="#">Cartão de visita</a></li>
-                  <li><a href="#">Papel timbrado</a></li>
-                  <li><a href="#">Agendas</a></li>
-                  <li><a href="#">Envelopes</a></li>
-                  <li><a href="#">Bloco de notas</a></li>
-                  <li><a href="#">Pasta</a></li>
-                  <li><a href="#">Cadernos</a></li>
-                  <li><a href="#">Adesivos</a></li>
-                </ul>
-              </div>
+            <div id="tab-6" class="tab">
+              <ul class="tab-list">
+                <li><a href="#">Cartão de visita</a></li>
+                <li><a href="#">Papel timbrado</a></li>
+                <li><a href="#">Agendas</a></li>
+                <li><a href="#">Envelopes</a></li>
+                <li><a href="#">Bloco de notas</a></li>
+                <li><a href="#">Pasta</a></li>
+                <li><a href="#">Cadernos</a></li>
+                <li><a href="#">Adesivos</a></li>
+              </ul>
             </div>
           </div>
-        </nav>
+        </div>
       </div>
-    </navbar>
+    </nav>
 
     <header id="header">
       <div class="d-none">
@@ -214,12 +220,12 @@
     </header>
 
     <main>
-      <section id="highlights">
+      <section id="highlights" class="px-3">
         <div class="container-xl">
-          <h2 class="title">Destaques</h2>
+          <h2 class="title mb-0">Destaques</h2>
 
           <div class="row">
-            <div class="col-3">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
               <div class="highlight">
                 <img
                   src="./assets/img/highlights/DESTAQUE-1.png"
@@ -237,7 +243,7 @@
               </div>
             </div>
 
-            <div class="col-3">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
               <div class="highlight">
                 <img
                   src="./assets/img/highlights/DESTAQUE-2.png"
@@ -255,7 +261,7 @@
               </div>
             </div>
 
-            <div class="col-3">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
               <div class="highlight">
                 <img
                   src="./assets/img/highlights/DESTAQUE-3.png"
@@ -273,7 +279,7 @@
               </div>
             </div>
 
-            <div class="col-3">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
               <div class="highlight">
                 <img
                   src="./assets/img/highlights/DESTAQUE-4.png"
@@ -295,10 +301,10 @@
       </section>
 
       <div class="container-xl" id="howto-container">
-        <section id="howto" class="border p-4 py-5 mb-4">
+        <section id="howto" class="border mx-3 p-4 py-5 mb-4">
           <h2 class="title">Como personalizar?</h2>
           <div class="row">
-            <div class="col-3 p-0">
+            <div class="col-12 col-sm-6 col-md-3 p-0">
               <img
                 src="./assets/img/howto/PASSO-1.png"
                 alt="Passo 1"
@@ -306,7 +312,7 @@
               />
               <h4 class="d-none">Escolha o produto que deseja personalizar</h4>
             </div>
-            <div class="col-3 p-0">
+            <div class="col-12 col-sm-6 col-md-3 p-0">
               <img
                 src="./assets/img/howto/PASSO-2.png"
                 alt="Passo 2"
@@ -314,7 +320,7 @@
               />
               <h4 class="d-none">Personalize com a sua marca</h4>
             </div>
-            <div class="col-3 p-0">
+            <div class="col-12 col-sm-6 col-md-3 p-0">
               <img
                 src="./assets/img/howto/PASSO-3.png"
                 alt="Passo 3"
@@ -324,7 +330,7 @@
                 Gostou do resultado? Hora de finalizar o pedido
               </h4>
             </div>
-            <div class="col-3 p-0">
+            <div class="col-12 col-sm-6 col-md-3 p-0">
               <img
                 src="./assets/img/howto/PASSO-4.png"
                 alt="Passo 4"
@@ -340,7 +346,7 @@
       </div>
     </main>
 
-    <footer id="footer" class="py-4">
+    <footer id="footer" class="p-4">
       <div class="container-xl position-relative">
         <button id="chat" aria-label="Fale conosco" class="m-0 p-0 border-0">
           <img
@@ -350,9 +356,11 @@
           />
         </button>
 
-        <div class="row align-items-center">
-          <div class="col-3">
-            <div class="d-flex flex-column align-items-center">
+        <div class="row align-items-start">
+          <div
+            class="col-12 col-sm-6 col-md-12 col-lg-3 order-sm-1 order-md-0 mb-4 mb-lg-0"
+          >
+            <div class="d-md-flex flex-column align-items-center">
               <img
                 src="./assets/img/logo.png"
                 alt="Logomarca da Meu Impresso"
@@ -375,7 +383,7 @@
             </div>
           </div>
 
-          <div class="col-3">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 order-sm-3 order-md-0">
             <h5 class="title">Institucional</h5>
             <ul class="list-unstyled">
               <li><a href="#">Quero personalizar</a></li>
@@ -386,7 +394,7 @@
             </ul>
           </div>
 
-          <div class="col-3">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 order-sm-4 order-md-0">
             <h5 class="title">Fale conosco</h5>
             <ul class="list-unstyled">
               <li class="d-flex">
@@ -431,7 +439,9 @@
             </ul>
           </div>
 
-          <div class="col-3">
+          <div
+            class="col-12 col-sm-6 col-md-4 col-lg-3 order-sm-2 order-md-0 mb-sm-4 mb-md-0"
+          >
             <h5 class="title">Formas de pagamento</h5>
             <img
               src="./assets/img/payment.png"

@@ -5,3 +5,13 @@
 #howto {
   border-radius: 16px;
 }
+
+#howto img {
+  display: block;
+  margin-left: auto;
+}
+
+#howto .col-12:nth-child(odd) img {
+  margin-left: 0px;
+  margin-right: auto;
+}

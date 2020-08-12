@@ -5,6 +5,7 @@
 
 body {
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 body,
@@ -24,13 +25,7 @@ a:focus {
 
 .container-xl {
   max-width: 1200px !important;
-}
-
-#header {
-  background-image: url(../img/banner.png);
-  background-position: center right;
-  background-size: cover;
-  height: 380px;
+  padding: 0px !important;
 }
 
 #footer {
@@ -56,11 +51,11 @@ a:focus {
 
 #footer #chat {
   border-radius: 50%;
+  bottom: 100%;
   box-shadow: 0px 10px 15px #ccc;
   height: 80px;
   position: absolute;
   right: 0;
-  top: -50%;
   transform: translateY(25%);
   outline: none;
   width: 80px;

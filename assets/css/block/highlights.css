@@ -6,7 +6,10 @@
   background-color: #f2f2f2;
   border-radius: 16px;
   color: #777777;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 50%;
+  max-width: 320px;
 }
 
 .highlight img {
@@ -15,7 +18,7 @@
 }
 
 .highlight .highlight-container {
-  padding: 16px;
+  padding: 10px;
   padding-top: 0px;
 }
 
