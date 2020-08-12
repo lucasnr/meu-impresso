@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="./assets/css/block/topbar.css" />
     <link rel="stylesheet" href="./assets/css/block/navbar.css" />
     <link rel="stylesheet" href="./assets/css/block/highlights.css" />
+    <link rel="stylesheet" href="./assets/css/block/howto.css" />
   </head>
   <body>
     <aside id="topbar" class="p-2 border-bottom">
@@ -81,7 +82,7 @@
     </aside>
 
     <navbar id="navbar" class="navbar">
-      <div class="container-xl">
+      <div class="container-xl position-relative">
         <a href="#" class="navbar-brand p-0 pl-4">
           <img src="./assets/img/logo.png" alt="Logomarca da Meu Impresso" />
         </a>
@@ -103,6 +104,104 @@
           <li class="nav-item"><a href="#" class="nav-link">A empresa</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Suporte</a></li>
         </ul>
+
+        <nav class="w-100 mt-2 overflow-hidden">
+          <div class="row m-0">
+            <ul
+              class="list-unstyled col-2 p-4 m-0 border-right"
+              id="tab-controls"
+            >
+              <li data-tab-id="tab-1" class="active">Embalagens</li>
+              <li data-tab-id="tab-2">Album</li>
+              <li data-tab-id="tab-3">Calendário</li>
+              <li data-tab-id="tab-4">Convites</li>
+              <li data-tab-id="tab-5">Livros</li>
+              <li data-tab-id="tab-6">Papelaria</li>
+            </ul>
+
+            <div class="col-10 p-4 mb-auto">
+              <h4 id="tab-title">Embalagens</h4>
+
+              <div id="tab-1" class="tab active">
+                <ul class="tab-list">
+                  <li>Cartão de visita</li>
+                  <li>Papel timbrado</li>
+                  <li>Agendas</li>
+                  <li>Envelopes</li>
+                  <li>Bloco de notas</li>
+                  <li>Pasta</li>
+                  <li>Cadernos</li>
+                  <li>Adesivos</li>
+                </ul>
+              </div>
+
+              <div id="tab-2" class="tab">
+                <ul class="tab-list">
+                  <li>Cartão de visita</li>
+                  <li>Papel timbrado</li>
+                  <li>Agendas</li>
+                  <li>Envelopes</li>
+                  <li>Bloco de notas</li>
+                  <li>Pasta</li>
+                  <li>Cadernos</li>
+                  <li>Adesivos</li>
+                </ul>
+              </div>
+
+              <div id="tab-3" class="tab">
+                <ul class="tab-list">
+                  <li>Cartão de visita</li>
+                  <li>Papel timbrado</li>
+                  <li>Agendas</li>
+                  <li>Envelopes</li>
+                  <li>Bloco de notas</li>
+                  <li>Pasta</li>
+                  <li>Cadernos</li>
+                  <li>Adesivos</li>
+                </ul>
+              </div>
+
+              <div id="tab-4" class="tab">
+                <ul class="tab-list">
+                  <li>Cartão de visita</li>
+                  <li>Papel timbrado</li>
+                  <li>Agendas</li>
+                  <li>Envelopes</li>
+                  <li>Bloco de notas</li>
+                  <li>Pasta</li>
+                  <li>Cadernos</li>
+                  <li>Adesivos</li>
+                </ul>
+              </div>
+
+              <div id="tab-5" class="tab">
+                <ul class="tab-list">
+                  <li>Cartão de visita</li>
+                  <li>Papel timbrado</li>
+                  <li>Agendas</li>
+                  <li>Envelopes</li>
+                  <li>Bloco de notas</li>
+                  <li>Pasta</li>
+                  <li>Cadernos</li>
+                  <li>Adesivos</li>
+                </ul>
+              </div>
+
+              <div id="tab-6" class="tab">
+                <ul class="tab-list">
+                  <li>Cartão de visita</li>
+                  <li>Papel timbrado</li>
+                  <li>Agendas</li>
+                  <li>Envelopes</li>
+                  <li>Bloco de notas</li>
+                  <li>Pasta</li>
+                  <li>Cadernos</li>
+                  <li>Adesivos</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
       </div>
     </navbar>
 
@@ -195,8 +294,8 @@
         </div>
       </section>
 
-      <div class="container-xl">
-        <section id="how-to" class="border rounded p-4 py-5 mb-4">
+      <div class="container-xl" id="howto-container">
+        <section id="howto" class="border p-4 py-5 mb-4">
           <h2 class="title">Como personalizar?</h2>
           <div class="row">
             <div class="col-3 p-0">
@@ -343,5 +442,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="./assets/js/jquery-3.5.1.min.js"></script>
+    <script src="./assets/js/index.js"></script>
   </body>
 </html>
