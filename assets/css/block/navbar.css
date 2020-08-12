@@ -35,7 +35,7 @@
   color: #fab914;
 }
 
-#navbar nav #nav-controls li::after {
+#navbar nav #tab-controls li::after {
   content: '>';
 }
 
