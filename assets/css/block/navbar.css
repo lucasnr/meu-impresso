@@ -16,6 +16,7 @@
 #navbar #tabs {
   background-color: var(--background-primary);
   border: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: none;
   color: #464646;
   display: none;
   font-size: 12px;
