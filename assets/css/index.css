@@ -12,7 +12,7 @@
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 992px) {
   #header {
     background-position: center right;
     height: 30vw;
