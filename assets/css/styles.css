@@ -1,19 +1,33 @@
+:root {
+  --background-primary: #f2f2f2;
+  --color-primary: #fab914;
+  --color-secondary: #7cc576;
+  --text-primary: #777777;
+}
+
 * {
   box-sizing: border-box;
   outline: none;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   overflow-y: scroll;
   overflow-x: hidden;
+}
+
+main {
+  flex-grow: 1;
 }
 
 body,
 input,
 button,
 textarea {
-  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Helvetica Neue', sans-serif;
 }
 
 a,
@@ -24,45 +38,35 @@ a:focus {
 }
 
 .container-xl {
-  max-width: 1200px !important;
+  max-width: 1260px !important;
   padding: 0px !important;
 }
 
-#footer {
-  background-color: #f2f2f2;
-  color: #777777;
-  font-size: 14px;
+.btn {
+  box-shadow: none !important;
 }
 
-#footer .title {
-  font-size: 14px;
-  font-weight: 800;
-  margin-bottom: 10px;
-  text-align: left;
+.btn-custom-primary,
+.btn-custom-secondary {
+  color: #fff !important;
+  font-weight: 700;
 }
 
-#footer ul {
-  line-height: 1.875;
+.btn-custom-primary {
+  background-color: var(--color-primary);
 }
 
-#footer ul li img {
-  margin: auto 0px;
+.btn-custom-secondary {
+  background-color: var(--color-secondary);
 }
 
-#footer #chat {
-  border-radius: 50%;
-  bottom: 100%;
-  box-shadow: 0px 10px 15px #ccc;
-  height: 80px;
-  position: absolute;
-  right: 0;
-  transform: translateY(25%);
-  outline: none;
-  width: 80px;
+.btn-custom-primary.rounded-pill {
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .title {
-  color: #777777;
+  color: var(--text-primary);
   font-size: 28px;
   font-weight: 700;
   text-align: center;

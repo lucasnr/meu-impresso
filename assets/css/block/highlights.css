@@ -3,9 +3,9 @@
 }
 
 .highlight {
-  background-color: #f2f2f2;
+  background-color: var(--background-primary);
   border-radius: 16px;
-  color: #777777;
+  color: var(--text-primary);
   margin-left: auto;
   margin-right: auto;
   margin-top: 50%;
@@ -44,7 +44,6 @@
 
 .highlight .btn {
   border-radius: 999px;
-  box-shadow: none !important;
   font-size: 12px;
   font-weight: 700;
   padding-bottom: 8px;
@@ -53,7 +52,7 @@
 }
 
 .highlight .btn:first-of-type {
-  background-color: #fab914;
+  background-color: var(--color-primary);
   color: #fff;
 }
 

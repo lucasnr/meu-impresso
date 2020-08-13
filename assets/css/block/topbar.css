@@ -1,9 +1,5 @@
-#topbar form button {
-  box-shadow: none !important;
-}
-
 #topbar #topbar-list {
-  color: #777777;
+  color: var(--text-primary);
   font-size: 14px;
   line-height: 2;
 }
@@ -37,7 +33,7 @@
 
 @media (min-width: 576px) {
   #topbar #topbar-list li + li::before {
-    background-color: #777777;
+    background-color: var(--text-primary);
     border-radius: 50%;
     content: '';
     display: block;
