@@ -1,7 +1,10 @@
 :root {
   --background-primary: #f2f2f2;
+  --background-secondary: #464646;
   --color-primary: #fab914;
   --color-secondary: #7cc576;
+  --color-alternative: #448ccb;
+  --color-danger: #fd4242;
   --text-primary: #777777;
 }
 
@@ -42,6 +45,15 @@ a:focus {
   padding: 0px !important;
 }
 
+.bg-custom-primary {
+  background-color: var(--background-primary);
+}
+
+.bg-custom-secondary {
+  background-color: var(--background-secondary);
+  color: #fff;
+}
+
 .btn {
   box-shadow: none !important;
 }
@@ -71,4 +83,16 @@ a:focus {
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .table-scroll-container {
+    overflow-x: scroll;
+  }
+}
+
+@media (max-width: 992px) {
+  .table-scroll-container-lg {
+    overflow-x: scroll;
+  }
 }

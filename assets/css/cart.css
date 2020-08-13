@@ -1,0 +1,117 @@
+main {
+  color: var(--text-primary);
+}
+
+main table {
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+}
+
+main table thead {
+  background-color: var(--background-secondary);
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+main table thead th {
+  padding: 12px 20px;
+}
+
+main table tbody td {
+  padding: 12px;
+}
+
+main table tbody tr:not(:last-of-type) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#products tbody tr td {
+  font-size: 12px;
+}
+
+#products tbody tr td:first-of-type {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+#products tbody tr td:first-of-type img {
+  width: 68px;
+}
+
+#products tbody tr td:last-of-type button {
+  border-radius: 50%;
+  border: none;
+  display: block;
+  height: 45px;
+  outline: none;
+  padding: 8px;
+  width: 45px;
+}
+
+#products tbody tr td:last-of-type img {
+  width: 100%;
+}
+
+#products tbody tr td:last-of-type button:first-of-type {
+  background-color: var(--color-alternative);
+  margin-bottom: 4px;
+}
+
+#products tbody tr td:last-of-type button:last-of-type {
+  background-color: var(--color-danger);
+}
+
+#delivery tbody tr td {
+  font-size: 14px;
+}
+
+#delivery tbody tr td label {
+  align-items: center;
+  display: flex;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0px;
+  text-transform: uppercase;
+}
+
+#discount {
+  border-radius: 16px;
+}
+
+#discount label {
+  font-size: 20px;
+}
+
+#total tbody tr td {
+  padding: 18px;
+}
+
+#total tbody tr td:last-of-type {
+  text-align: right;
+}
+
+#total tbody tr:last-of-type td {
+  background-color: var(--background-secondary);
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media (min-width: 576px) {
+  #total tbody tr td {
+    font-size: 20px;
+    padding: 24px 32px;
+  }
+}
+
+@media (max-width: 992px) {
+  #delivery tbody tr td:nth-of-type(2) {
+    min-width: 200px;
+  }
+}
