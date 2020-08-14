@@ -216,14 +216,6 @@
       </div>
     </nav>
 
-    <header id="header">
-      <div class="d-none">
-        <h2>Aqui você personaliza o seu impresso online</h2>
-        <h3>Fácil, rápido e do seu jeito</h3>
-        <button type="button">Personalize</button>
-      </div>
-    </header>
-
     <main class="my-2 pt-5 pb-5 pb-lg-4 px-3 bg-custom-primary">
       <div class="container-xl">
         <section id="products">
@@ -283,7 +275,7 @@
         </section>
 
         <section class="mt-3">
-          <form class="row">
+          <form class="row" action="./payment.html" method="GET">
             <div class="col-lg-6">
               <div class="table-scroll-container">
                 <table id="delivery">
@@ -298,7 +290,12 @@
                     <tr>
                       <td>
                         <div class="d-flex align-items-center">
-                          <input type="radio" name="delivery" id="retirada" />
+                          <input
+                            type="radio"
+                            name="delivery"
+                            id="retirada"
+                            value="retirada"
+                          />
                           <label for="retirada">
                             <img
                               src="./assets/img/icons/location.png"
@@ -322,6 +319,7 @@
                             type="radio"
                             name="delivery"
                             id="motoboy"
+                            value="motoboy"
                             checked
                           />
                           <label for="motoboy">
@@ -342,7 +340,12 @@
                     <tr>
                       <td>
                         <div class="d-flex align-items-center">
-                          <input type="radio" name="delivery" id="sedex" />
+                          <input
+                            type="radio"
+                            name="delivery"
+                            id="sedex"
+                            value="sedex"
+                          />
                           <label for="sedex">
                             <img
                               src="./assets/img/icons/sedex.png"
