@@ -1,0 +1,22 @@
+.form .form-content {
+  align-items: center;
+  display: flex;
+}
+
+.form .form-content > *:last-child {
+  font-size: 16px;
+  margin: 0px;
+  margin-left: auto;
+  text-align: right;
+}
+
+.form label {
+  font-size: 14px;
+  margin: 0px 16px;
+}
+
+.form + span {
+  display: block;
+  font-size: 12px;
+  margin: 4px 0px 16px 0px;
+}

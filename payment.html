@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meu Impresso - Carrinho</title>
+    <title>Meu Impresso - Pagamento</title>
 
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
     <link
@@ -19,9 +19,10 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="stylesheet" href="./assets/css/block/topbar.css" />
     <link rel="stylesheet" href="./assets/css/block/navbar.css" />
+    <link rel="stylesheet" href="./assets/css/block/form.css" />
     <link rel="stylesheet" href="./assets/css/block/footer.css" />
 
-    <link rel="stylesheet" href="./assets/css/cart.css" />
+    <link rel="stylesheet" href="./assets/css/payment.css" />
   </head>
   <body>
     <aside id="topbar" class="p-2 border-bottom">
@@ -217,211 +218,158 @@
     </nav>
 
     <main class="my-2 py-5 pb-lg-4 px-3 bg-custom-primary">
-      <div class="container-xl">
-        <section id="products">
-          <div class="table-scroll-container-lg">
-            <table>
-              <thead>
-                <tr>
-                  <th>Foto do produto</th>
-                  <th>Descrição</th>
-                  <th>Quantidade</th>
-                  <th>Prazo</th>
-                  <th>Valor</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <img
-                      src="./assets/img/cart-product.png"
-                      alt="Produto"
-                      class="img-fluid"
-                    />
-                  </td>
-                  <td>
-                    Agenda; Capa Dura 4x0 - Laminação Fosca - Encadernação
-                    Wire-o prata - Miolo 375 páginas<br />
-                    4x4 - Couche Fosco 115gr
-                  </td>
-                  <td class="text-center text-md-left">1</td>
-                  <td>5 dias úteis</td>
-                  <td>R$ 60,00</td>
-                  <td>
-                    <button>
-                      <img
-                        src="./assets/img/icons/copy.png"
-                        alt="Ícone de copiar"
-                      />
-                    </button>
-                    <button>
-                      <img
-                        src="./assets/img/icons/delete.png"
-                        alt="Ícone de deletar"
-                      />
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+      <form class="container-xl" action="./checkout.html" method="GET">
+        <h2 class="title text-left mb-3">Pagamento</h2>
+
+        <section class="form">
+          <h3 class="form-title">Cartão de crédito / Débito</h3>
+          <div class="form-content d-block d-sm-flex">
+            <div class="d-flex align-items-center">
+              <input
+                type="radio"
+                name="payment-option"
+                id="cartao"
+                value="cartao"
+                checked
+              />
+              <label for="cartao">
+                <img
+                  src="./assets/img/payment/bandeiras.png"
+                  class="img-fluid"
+                  alt="Bandeiras de bancos"
+                />
+              </label>
+            </div>
+
+            <h4 class="mt-2 mt-sm-0">R$ 67,50</h4>
           </div>
-
-          <button
-            class="btn btn-sm rounded-pill btn-custom-primary text-uppercase mt-2 ml-auto mr-4 d-block"
-          >
-            Continuar comprando
-          </button>
         </section>
+        <span>
+          <span class="text-uppercase">Atenção: </span>
+          A produção será iniciada mediante aprovação de pagamento.
+        </span>
 
-        <section class="mt-3">
-          <form class="row" action="./payment.html" method="GET">
-            <div class="col-lg-6">
-              <div class="table-scroll-container">
-                <table id="delivery">
-                  <thead>
-                    <tr>
-                      <th>Tipo de entrega</th>
-                      <th>Prazo</th>
-                      <th>Valor</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div class="d-flex align-items-center">
-                          <input
-                            type="radio"
-                            name="delivery"
-                            id="retirada"
-                            value="retirada"
-                          />
-                          <label for="retirada">
-                            <img
-                              src="./assets/img/icons/location.png"
-                              alt="Ícone de retirada no local"
-                            />
-                            Retirada no local
-                          </label>
-                        </div>
-                      </td>
-                      <td>
-                        Disponível para retirada após concluido o prazo de
-                        produção.
-                      </td>
-                      <td>R$ 0,00</td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <div class="d-flex align-items-center">
-                          <input
-                            type="radio"
-                            name="delivery"
-                            id="motoboy"
-                            value="motoboy"
-                            checked
-                          />
-                          <label for="motoboy">
-                            <img
-                              src="./assets/img/icons/bike.png"
-                              alt="Ícone de entrega por motoboy"
-                            />
-                            Motoboy
-                          </label>
-                        </div>
-                      </td>
-                      <td>
-                        2 dias úteis
-                      </td>
-                      <td>R$ 7,50</td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <div class="d-flex align-items-center">
-                          <input
-                            type="radio"
-                            name="delivery"
-                            id="sedex"
-                            value="sedex"
-                          />
-                          <label for="sedex">
-                            <img
-                              src="./assets/img/icons/sedex.png"
-                              alt="Ícone de entrega por sedex"
-                            />
-                            Sedex
-                          </label>
-                        </div>
-                      </td>
-                      <td>
-                        Calcular frete
-                      </td>
-                      <td>
-                        <button
-                          class="btn btn-sm py-2 rounded-pill btn-custom-primary text-nowrap"
-                          type="button"
-                        >
-                          Calcular frete
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <div id="discount" class="bg-white p-4 mt-3">
-                <label for="cupom" class="font-weight-bold text-uppercase m-0"
-                  >Cupom de desconto</label
-                >
-                <div class="d-flex flex-column flex-sm-row">
-                  <input
-                    type="text"
-                    id="cupom"
-                    class="form-control-lg border flex-grow-1"
+        <section class="form">
+          <h3 class="form-title">Depósito bancário</h3>
+          <div class="form-content d-block d-sm-flex">
+            <div class="d-flex flex-wrap">
+              <div>
+                <input
+                  type="radio"
+                  name="payment-option"
+                  id="santander"
+                  value="santander"
+                />
+                <label for="santander">
+                  <img
+                    src="./assets/img/payment/santander.png"
+                    alt="Bandeira do santander"
                   />
-                  <button
-                    class="btn py-2 btn-custom-primary text-uppercase rounded-pill text-nowrap ml-2 mt-2 mt-sm-0"
-                    type="button"
-                  >
-                    Validar cupom
-                  </button>
-                </div>
+                  <span class="d-none d-lg-inline">Santander</span>
+                </label>
+              </div>
+
+              <div>
+                <input type="radio" name="payment-option" id="bb" value="bb" />
+                <label for="bb">
+                  <img
+                    src="./assets/img/payment/brasil.png"
+                    alt="Bandeira do banco do brasil"
+                  />
+                  <span class="d-none d-lg-inline">BB</span>
+                </label>
+              </div>
+
+              <div>
+                <input
+                  type="radio"
+                  name="payment-option"
+                  id="caixa"
+                  value="caixa"
+                />
+                <label for="caixa">
+                  <img
+                    src="./assets/img/payment/caixa.png"
+                    alt="Bandeira da caixa"
+                  />
+                  <span class="d-none d-lg-inline">Caixa</span>
+                </label>
+              </div>
+
+              <div>
+                <input
+                  type="radio"
+                  name="payment-option"
+                  id="bradesco"
+                  value="bradesco"
+                />
+                <label for="bradesco">
+                  <img
+                    src="./assets/img/payment/bradesco.png"
+                    alt="Bandeira do bradesco"
+                  />
+                  <span class="d-none d-lg-inline">Bradesco</span>
+                </label>
+              </div>
+
+              <div>
+                <input
+                  type="radio"
+                  name="payment-option"
+                  id="itau"
+                  value="itau"
+                />
+                <label for="itau">
+                  <img
+                    src="./assets/img/payment/itau.png"
+                    alt="Bandeira do itaú"
+                  />
+                  <span class="d-none d-lg-inline">Itaú</span>
+                </label>
               </div>
             </div>
 
-            <div class="col-lg-6 mt-3 mt-lg-0">
-              <table id="total">
-                <tbody>
-                  <tr>
-                    <td>Valor total do pedido</td>
-                    <td>R$ 60,00</td>
-                  </tr>
-                  <tr>
-                    <td>Valor do frete</td>
-                    <td>R$ 7,50</td>
-                  </tr>
-                  <tr>
-                    <td>Desconto</td>
-                    <td>-R$ 0,00</td>
-                  </tr>
-                  <tr>
-                    <td>Valor final</td>
-                    <td>R$ 67,50</td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <button
-                class="btn btn-custom-secondary rounded-pill text-uppercase py-2 d-block ml-auto mt-3"
-              >
-                Finalizar compra
-              </button>
-            </div>
-          </form>
+            <h4 class="mt-2 mt-sm-0 text-nowrap">R$ 67,50</h4>
+          </div>
         </section>
-      </div>
+        <span>
+          <span class="text-uppercase">Atenção: </span>
+          Para iniciar a produção, por favor envie o comprovante de pagamento
+          para o email: financeiro@meuimpresso.com.br.
+        </span>
+
+        <section class="form">
+          <h3 class="form-title">Boleto Bancário</h3>
+          <div class="form-content">
+            <input
+              type="radio"
+              name="payment-option"
+              id="boleto"
+              value="boleto"
+            />
+            <label for="boleto">
+              <img
+                src="./assets/img/payment/boleto.png"
+                alt="Boleto bancário"
+              />
+            </label>
+
+            <h4>R$ 67,50</h4>
+          </div>
+        </section>
+        <span>
+          <span class="text-uppercase">Atenção: </span>
+          Para iniciar a produção, por favor envie o comprovante de pagamento
+          para o email: financeiro@meuimpresso.com.br.
+        </span>
+
+        <button
+          type="submit"
+          class="btn btn-custom-secondary rounded-pill text-uppercase px-4 d-block ml-auto mt-3 mb-4"
+        >
+          Avançar
+        </button>
+      </form>
     </main>
 
     <footer id="footer" class="p-4">

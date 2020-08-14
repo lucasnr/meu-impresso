@@ -1,0 +1,22 @@
+.form {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.form .form-title {
+  background-color: var(--background-secondary);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.form .form-content {
+  background-color: #ffffff;
+}
+
+.form .form-title,
+.form .form-content {
+  padding: 12px 24px;
+}
