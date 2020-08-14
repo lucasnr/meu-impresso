@@ -1,0 +1,26 @@
+.banner {
+  align-items: center;
+  display: flex;
+  height: 380px;
+}
+
+.banner .banner-title {
+  color: #fff;
+  font-size: 58px;
+  font-weight: 700;
+  margin-right: 80px;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+@media (max-width: 395px) {
+  .banner {
+    height: 95vw;
+  }
+}
+
+@media (min-width: 992px) {
+  .banner {
+    height: 30vw;
+  }
+}

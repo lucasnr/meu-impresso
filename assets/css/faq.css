@@ -1,0 +1,64 @@
+.banner {
+  background-image: url(../img/banner-faq.png);
+  background-position: center;
+  background-size: cover;
+}
+
+#title {
+  font-size: 28px;
+}
+
+#faq-menu li {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-size: 14px;
+  line-height: 1.75;
+  text-decoration: underline;
+}
+
+#accordion li button {
+  background-color: #fff;
+  border: none;
+  box-shadow: none !important;
+  color: inherit;
+  display: block;
+  margin-top: 4px;
+  outline: none;
+  padding: 16px 24px;
+  text-align: left;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+#accordion .collapse {
+  background-color: #fff;
+  font-size: 14px;
+  margin: 0px;
+  margin-bottom: 16px;
+  margin-top: 4px;
+  padding: 16px 24px;
+}
+
+@media (min-width: 576px) {
+  #faq-menu li + li::before {
+    background-color: var(--text-primary);
+    content: '';
+    display: inline-block;
+    height: 70%;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 1px;
+  }
+}
+
+@media (min-width: 768px) {
+  #faq-menu li {
+    font-size: 16px;
+  }
+
+  #faq-menu li + li::before {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
