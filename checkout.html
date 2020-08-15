@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meu Impresso - Pagamento</title>
+    <title>Meu Impresso - Checkout</title>
 
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
     <link
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="./assets/css/block/form.css" />
     <link rel="stylesheet" href="./assets/css/block/footer.css" />
 
-    <link rel="stylesheet" href="./assets/css/payment.css" />
+    <link rel="stylesheet" href="./assets/css/checkout.css" />
   </head>
   <body>
     <aside id="topbar" class="p-2 border-bottom">
@@ -218,148 +218,319 @@
     </nav>
 
     <main class="my-2 py-5 pb-lg-4 px-3 bg-custom-primary">
-      <form class="container-xl" action="./checkout.html" method="GET">
-        <h2 class="title text-left mb-3">Pagamento</h2>
+      <form class="container-xl">
+        <div class="row">
+          <div class="col-lg-4 d-flex flex-column">
+            <section class="form mb-2">
+              <h2 class="form-title">Endereço de entrega</h2>
+              <div class="form-content">
+                <div class="form-group">
+                  <label for="endereco">Endereço</label>
+                  <input type="text" id="endereco" class="form-control" />
+                </div>
 
-        <section class="form">
-          <h3 class="form-title">Cartão de crédito / Débito</h3>
-          <div class="form-content d-block d-sm-flex">
-            <div class="d-flex align-items-center">
-              <input
-                type="radio"
-                name="payment-option"
-                id="cartao"
-                value="cartao"
-                checked
-              />
-              <label for="cartao">
-                <img
-                  src="./assets/img/payment/bandeiras.png"
-                  class="img-fluid"
-                  alt="Bandeiras de bancos"
+                <div class="row">
+                  <div class="form-group col-8 pr-0">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" id="bairro" class="form-control" />
+                  </div>
+                  <div class="form-group col-4">
+                    <label for="numero">Número</label>
+                    <input type="text" id="numero" class="form-control" />
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-4 pr-0">
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" class="form-control" />
+                  </div>
+                  <div class="form-group col-8">
+                    <label for="complemento">Complemento</label>
+                    <input type="text" id="complemento" class="form-control" />
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-8 pr-0">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" class="form-control" />
+                  </div>
+                  <div class="form-group col-4">
+                    <label for="mg">MG</label>
+                    <input type="text" id="mg" class="form-control" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="observacoes">Observações</label>
+                  <textarea
+                    id="observacoes"
+                    cols="30"
+                    rows="10"
+                    class="form-control"
+                  ></textarea>
+                </div>
+              </div>
+            </section>
+
+            <section class="form mt-auto">
+              <h2 class="form-title">Tipo de entrega</h2>
+              <div class="form-content py-4">
+                <input
+                  type="radio"
+                  name="delivery"
+                  id="frete"
+                  value="frete"
+                  checked
                 />
-              </label>
-            </div>
-
-            <h4 class="mt-2 mt-sm-0">R$ 67,50</h4>
+                <label for="frete">
+                  Frete - <span class="text-success">R$ 7,50</span>
+                </label>
+              </div>
+            </section>
           </div>
-        </section>
-        <span>
-          <span class="text-uppercase">Atenção: </span>
-          A produção será iniciada mediante aprovação de pagamento.
-        </span>
 
-        <section class="form">
-          <h3 class="form-title">Depósito bancário</h3>
-          <div class="form-content d-block d-sm-flex">
-            <div class="d-flex flex-wrap">
-              <div>
-                <input
-                  type="radio"
-                  name="payment-option"
-                  id="santander"
-                  value="santander"
-                />
-                <label for="santander">
-                  <img
-                    src="./assets/img/payment/santander.png"
-                    alt="Santander"
-                  />
-                  <span class="d-none d-lg-inline">Santander</span>
+          <div class="col-md-6 col-lg-4 px-lg-0 mt-2 mt-lg-0">
+            <section class="form" id="card">
+              <h2 class="form-title">Forma de pagamento</h2>
+              <div class="form-content">
+                <div class="d-flex justify-content-around form-group">
+                  <div class="d-flex align-items-center">
+                    <input
+                      type="radio"
+                      name="payment-option"
+                      id="credito"
+                      value="credito"
+                      class="m-0"
+                      checked
+                    />
+                    <label for="credito" class="ml-1 mb-0">
+                      Cartão de crédito
+                    </label>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <input
+                      type="radio"
+                      name="payment-option"
+                      id="debito"
+                      value="debito"
+                      class="m-0"
+                    />
+                    <label for="debito" class="ml-1 mb-0">
+                      Cartão de débito
+                    </label>
+                  </div>
+                </div>
+
+                <label class="text-center">
+                  Selecione a bandeira do seu cartão de crédito
                 </label>
-              </div>
+                <div class="d-flex flex-wrap justify-content-center form-group">
+                  <div>
+                    <input
+                      type="radio"
+                      name="payment-card"
+                      id="visa"
+                      value="visa"
+                    />
+                    <label for="visa">
+                      <img src="./assets/img/payment/visa.png" alt="Visa" />
+                    </label>
+                  </div>
+                  <div>
+                    <input
+                      type="radio"
+                      name="payment-card"
+                      id="mastercard"
+                      value="mastercard"
+                    />
+                    <label for="mastercard">
+                      <img
+                        src="./assets/img/payment/mastercard.png"
+                        alt="Mastercard"
+                      />
+                    </label>
+                  </div>
+                  <div>
+                    <input
+                      type="radio"
+                      name="payment-card"
+                      id="amex"
+                      value="amex"
+                    />
+                    <label for="amex">
+                      <img
+                        src="./assets/img/payment/amex.png"
+                        alt="American Express"
+                      />
+                    </label>
+                  </div>
+                  <div>
+                    <input
+                      type="radio"
+                      name="payment-card"
+                      id="elo"
+                      value="elo"
+                    />
+                    <label for="elo">
+                      <img src="./assets/img/payment/elo.png" alt="Elo" />
+                    </label>
+                  </div>
+                  <div>
+                    <input
+                      type="radio"
+                      name="payment-card"
+                      id="aura"
+                      value="aura"
+                    />
+                    <label for="aura">
+                      <img src="./assets/img/payment/aura.png" alt="Aura" />
+                    </label>
+                  </div>
+                  <div>
+                    <input
+                      type="radio"
+                      name="payment-card"
+                      id="jcb"
+                      value="jcb"
+                    />
+                    <label for="jcb">
+                      <img src="./assets/img/payment/jcb.png" alt="JCB" />
+                    </label>
+                  </div>
+                  <div>
+                    <input
+                      type="radio"
+                      name="payment-card"
+                      id="discover"
+                      value="discover"
+                    />
+                    <label for="discover">
+                      <img
+                        src="./assets/img/payment/discover.png"
+                        alt="Discover"
+                      />
+                    </label>
+                  </div>
+                  <div>
+                    <input
+                      type="radio"
+                      name="payment-card"
+                      id="diners"
+                      value="diners"
+                    />
+                    <label for="diners">
+                      <img src="./assets/img/payment/diners.png" alt="Diners" />
+                    </label>
+                  </div>
+                </div>
 
-              <div>
-                <input type="radio" name="payment-option" id="bb" value="bb" />
-                <label for="bb">
-                  <img
-                    src="./assets/img/payment/brasil.png"
-                    alt="Banco do Brasil"
-                  />
-                  <span class="d-none d-lg-inline">BB</span>
-                </label>
-              </div>
+                <div class="form-group">
+                  <label for="numero">Número de cartão</label>
+                  <input type="text" id="numero" class="form-control" />
+                </div>
 
-              <div>
-                <input
-                  type="radio"
-                  name="payment-option"
-                  id="caixa"
-                  value="caixa"
-                />
-                <label for="caixa">
-                  <img src="./assets/img/payment/caixa.png" alt="Banco Caixa" />
-                  <span class="d-none d-lg-inline">Caixa</span>
-                </label>
-              </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-6 pr-0">
+                      <label for="validade-1">Validade</label>
+                      <div class="d-flex">
+                        <select class="form-control" id="validade-1"></select>
+                        <div class="px-1"></div>
+                        <select class="form-control" id="validade-2"></select>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <label for="cvv" class="text-nowrap"
+                        >Código de segurança</label
+                      >
+                      <input type="text" class="form-control" id="cvv" />
+                    </div>
+                  </div>
+                </div>
 
-              <div>
-                <input
-                  type="radio"
-                  name="payment-option"
-                  id="bradesco"
-                  value="bradesco"
-                />
-                <label for="bradesco">
-                  <img src="./assets/img/payment/bradesco.png" alt="Bradesco" />
-                  <span class="d-none d-lg-inline">Bradesco</span>
-                </label>
-              </div>
+                <div class="form-group">
+                  <label for="titular">Nome do titular do cartão</label>
+                  <input type="text" id="titular" class="form-control" />
+                </div>
 
-              <div>
-                <input
-                  type="radio"
-                  name="payment-option"
-                  id="itau"
-                  value="itau"
-                />
-                <label for="itau">
-                  <img src="./assets/img/payment/itau.png" alt="Itaú" />
-                  <span class="d-none d-lg-inline">Itaú</span>
-                </label>
+                <div class="form-group">
+                  <label for="parcelas">Número de parcelas</label>
+                  <select id="parcelas" class="form-control">
+                    <option value="1x">1x de R$ 67,50 (sem juros)</option>
+                  </select>
+                </div>
               </div>
-            </div>
+            </section>
 
-            <h4 class="mt-2 mt-sm-0 text-nowrap">R$ 67,50</h4>
+            <section class="form mt-2" id="identification">
+              <h2 class="form-title">Identificação</h2>
+              <div class="form-content">
+                <div class="form-group">
+                  <label for="nome">Nome Completo</label>
+                  <input type="text" id="nome" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                  <label for="cpf-cnpj">CPF/CNPJ</label>
+                  <input type="text" id="cpf-cnpj" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                  <label for="telefone">Telefone</label>
+                  <input type="tel" id="telefone" class="form-control" />
+                </div>
+              </div>
+            </section>
           </div>
-        </section>
-        <span>
-          <span class="text-uppercase">Atenção: </span>
-          Para iniciar a produção, por favor envie o comprovante de pagamento
-          para o email: financeiro@meuimpresso.com.br.
-        </span>
 
-        <section class="form">
-          <h3 class="form-title">Boleto Bancário</h3>
-          <div class="form-content">
-            <input
-              type="radio"
-              name="payment-option"
-              id="boleto"
-              value="boleto"
-            />
-            <label for="boleto">
-              <img
-                src="./assets/img/payment/boleto.png"
-                alt="Boleto bancário"
-              />
-            </label>
+          <div class="col-md-6 col-lg-4 mt-2 mt-lg-0">
+            <section class="form" id="summary">
+              <h2 class="form-title">Resumo da compra</h2>
+              <div class="form-content pb-5">
+                <table class="w-100">
+                  <thead>
+                    <tr>
+                      <th>Produto</th>
+                      <th class="text-right pr-3">Preço</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Valor do pedido</td>
+                      <td>R$ 60,00</td>
+                    </tr>
+                    <tr>
+                      <td>Valor do pedido</td>
+                      <td>R$ 07,50</td>
+                    </tr>
+                    <tr>
+                      <td class="pb-4">Desconto</td>
+                      <td class="pb-4">R$ 00,00</td>
+                    </tr>
+                    <tr>
+                      <td>Valor final</td>
+                      <td>R$ 67,50</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
 
-            <h4>R$ 67,50</h4>
+            <button
+              type="submit"
+              class="btn btn-sm btn-custom-secondary text-uppercase rounded-pill px-4 py-2 d-block ml-auto mt-2"
+            >
+              Finalizar
+            </button>
           </div>
-        </section>
-        <span>
-          <span class="text-uppercase">Atenção: </span>
-          Para iniciar a produção, por favor envie o comprovante de pagamento
-          para o email: financeiro@meuimpresso.com.br.
-        </span>
-
-        <button
-          type="submit"
-          class="btn btn-custom-secondary rounded-pill text-uppercase px-4 d-block ml-auto mt-3 mb-4"
-        >
-          Avançar
-        </button>
+        </div>
       </form>
     </main>
 
