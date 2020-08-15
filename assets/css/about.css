@@ -1,0 +1,44 @@
+.banner {
+  background-image: url(../img/banner-about.png);
+  background-position: center;
+  background-size: cover;
+}
+
+main p {
+  line-height: 1.75;
+}
+
+#background::before {
+  background-color: var(--background-primary);
+  content: '';
+  height: 85%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.about-card {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 24px;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0px auto;
+  max-width: 350px;
+  padding: 36px;
+  text-align: center;
+}
+
+.about-card .about-card-title {
+  color: #929292;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 8px 0px;
+}
+
+.about-card p {
+  font-size: 14px;
+}
