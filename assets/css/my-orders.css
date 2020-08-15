@@ -1,0 +1,41 @@
+main table thead th,
+main table tbody td {
+  font-size: 14px;
+  padding: 4px 16px;
+  text-align: center;
+}
+
+main table tbody tr {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+main table thead th {
+  white-space: nowrap;
+}
+
+main table tbody td {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-weight: 600;
+}
+
+#range {
+  height: 12px;
+  width: 50%;
+}
+
+#range svg {
+  border: 2px solid var(--background-primary);
+  border-radius: 50%;
+  height: 24px;
+  padding: 2px;
+  width: 24px;
+}
+
+#range svg:first-of-type {
+  margin-left: -4px;
+}
+
+#range svg:last-of-type {
+  margin-right: -4px;
+}

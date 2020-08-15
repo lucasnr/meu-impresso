@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meu Impresso - Dúvidas</title>
+    <title>Meu Impresso - Meus Pedidos</title>
 
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
     <link
@@ -19,10 +19,10 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="stylesheet" href="./assets/css/block/topbar.css" />
     <link rel="stylesheet" href="./assets/css/block/navbar.css" />
-    <link rel="stylesheet" href="./assets/css/block/banner.css" />
+    <link rel="stylesheet" href="./assets/css/block/account.css" />
     <link rel="stylesheet" href="./assets/css/block/footer.css" />
 
-    <link rel="stylesheet" href="./assets/css/faq.css" />
+    <link rel="stylesheet" href="./assets/css/my-orders.css" />
   </head>
   <body>
     <aside id="topbar" class="p-2 border-bottom">
@@ -85,7 +85,7 @@
       </div>
     </aside>
 
-    <nav id="navbar" class="navbar position-relative">
+    <nav id="navbar" class="navbar position-relative border-bottom">
       <div class="container-xl">
         <a
           href="./index.html"
@@ -219,167 +219,160 @@
       </div>
     </nav>
 
-    <header class="banner">
+    <div class="flex-grow-1 my-2 py-5 pb-lg-4 px-3 bg-custom-primary">
       <div class="container-xl">
-        <h2 class="banner-title">Dúvidas</h2>
-      </div>
-    </header>
+        <div class="row">
+          <div class="col-md-5 col-xl-3">
+            <aside class="account-sidebar">
+              <h2 class="username mb-2 pb-4 border-bottom border-dark">
+                Nome Sobrenome do Usuário
+              </h2>
 
-    <main class="pb-5 pt-4">
-      <div class="p-3">
-        <div class="container-xl">
-          <h2 id="title" class="border-bottom px-2 mb-4 pb-2">
-            Qual é a sua dúvida?
-          </h2>
-          <ul
-            id="faq-menu"
-            class="list-unstyled d-sm-flex justify-content-center"
-          >
-            <li>Sobre a personalização</li>
-            <li>Envio de arquivo</li>
-            <li>Prazos e Entregas</li>
-            <li>Pós-compra</li>
-          </ul>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="./my-orders.html" class="active">
+                    <img
+                      src="./assets/img/icons/account/list-hover.png"
+                      alt="Meus pedidos"
+                    />
+                    Meus Pedidos
+                  </a>
+                </li>
+                <li>
+                  <a href="./my-addresses.html">
+                    <img
+                      src="./assets/img/icons/account/location-hover.png"
+                      alt="Meus endereços"
+                    />
+                    <img
+                      src="./assets/img/icons/account/location.png"
+                      alt="Meus endereços"
+                    />
+                    Meus Endereços
+                  </a>
+                </li>
+                <li>
+                  <a href="./my-account.html">
+                    <img
+                      src="./assets/img/icons/account/account-hover.png"
+                      alt="Meus dados"
+                    />
+                    <img
+                      src="./assets/img/icons/account/account.png"
+                      alt="Meus dados"
+                    />
+                    Meus Dados
+                  </a>
+                </li>
+                <li>
+                  <a href="./my-cards.html">
+                    <img
+                      src="./assets/img/icons/account/card-hover.png"
+                      alt="Meus cartões"
+                    />
+                    <img
+                      src="./assets/img/icons/account/card.png"
+                      alt="Meus cartões"
+                    />
+                    Cartões Salvos
+                  </a>
+                </li>
+                <li>
+                  <a href="./my-items.html">
+                    <img
+                      src="./assets/img/icons/account/bookmark-hover.png"
+                      alt="Itens salvos"
+                    />
+                    <img
+                      src="./assets/img/icons/account/bookmark.png"
+                      alt="Itens salvos"
+                    />
+                    Itens Salvos
+                  </a>
+                </li>
+                <li>
+                  <a href="./index.html">
+                    <img
+                      src="./assets/img/icons/account/exit-hover.png"
+                      alt="Sair"
+                    />
+                    <img src="./assets/img/icons/account/exit.png" alt="Sair" />
+                    Sair
+                  </a>
+                </li>
+              </ul>
+            </aside>
+          </div>
+
+          <main class="col-md-7 col-xl-9">
+            <h2 class="account-title text-uppercase">Minha conta</h2>
+
+            <h3 class="account-subtitle">Meus pedidos</h3>
+            <span>Acompanhe o status dos seus pedidos</span>
+
+            <div class="table-scroll-container-xl">
+              <table class="w-100 mt-2">
+                <thead>
+                  <tr class="bg-custom-secondary">
+                    <th class="text-uppercase">Nº Pedido</th>
+                    <th class="text-uppercase">Pedido feito em</th>
+                    <th class="text-uppercase">Pagamento</th>
+                    <th>
+                      <div class="d-flex justify-content-lg-around">
+                        <span>Pendente</span>
+                        <span class="mx-3">Em produção</span>
+                        <span>Finalizado</span>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>000011</td>
+                    <td>22/07/2020</td>
+                    <td>
+                      <div
+                        class="d-flex text-success align-items-center justify-content-center"
+                      >
+                        <svg
+                          style="width: 14px; height: 14px;"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"
+                          />
+                        </svg>
+                        Pago
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        id="range"
+                        class="bg-success text-white d-flex align-items-center justify-content-between"
+                      >
+                        <svg viewBox="0 0 24 24" class="bg-success">
+                          <path
+                            fill="currentColor"
+                            d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"
+                          />
+                        </svg>
+                        <svg viewBox="0 0 24 24" class="bg-success">
+                          <path
+                            fill="currentColor"
+                            d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"
+                          />
+                        </svg>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </main>
         </div>
       </div>
-      <div class="bg-custom-primary p-3">
-        <div class="container-xl">
-          <ul id="accordion" class="list-unstyled">
-            <li>
-              <button
-                data-toggle="collapse"
-                data-target="#collapseOne"
-                aria-expanded="true"
-                aria-controls="collapseOne"
-              >
-                <strong>1</strong> Como personalizar um produto?
-              </button>
-            </li>
-
-            <p
-              id="collapseOne"
-              class="collapse show"
-              aria-labelledby="headingOne"
-              data-parent="#accordion"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
-              itaque mollitia necessitatibus, soluta, possimus nostrum
-              architecto expedita officia eos rem illo nihil at corrupti
-              distinctio excepturi, accusantium modi pariatur amet? Lorem ipsum,
-              dolor sit amet consectetur adipisicing elit. Rerum perferendis
-              veniam dolorum repellat itaque accusantium laborum reprehenderit
-              dolore soluta consequuntur? Minima aperiam nostrum error autem
-              quaerat recusandae vitae dignissimos hic?
-            </p>
-
-            <li>
-              <button
-                data-toggle="collapse"
-                data-target="#collapseTwo"
-                aria-expanded="true"
-                aria-controls="collapseTwo"
-              >
-                <strong>2</strong> Como personalizar um produto?
-              </button>
-            </li>
-
-            <p
-              id="collapseTwo"
-              class="collapse"
-              aria-labelledby="headingTwo"
-              data-parent="#accordion"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
-              itaque mollitia necessitatibus, soluta, possimus nostrum
-              architecto expedita officia eos rem illo nihil at corrupti
-              distinctio excepturi, accusantium modi pariatur amet? Lorem ipsum,
-              dolor sit amet consectetur adipisicing elit. Rerum perferendis
-              veniam dolorum repellat itaque accusantium laborum reprehenderit
-              dolore soluta consequuntur? Minima aperiam nostrum error autem
-              quaerat recusandae vitae dignissimos hic?
-            </p>
-            <li>
-              <button
-                data-toggle="collapse"
-                data-target="#collapseThree"
-                aria-expanded="true"
-                aria-controls="collapseThree"
-              >
-                <strong>3</strong> Como personalizar um produto?
-              </button>
-            </li>
-
-            <p
-              id="collapseThree"
-              class="collapse"
-              aria-labelledby="headingThree"
-              data-parent="#accordion"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
-              itaque mollitia necessitatibus, soluta, possimus nostrum
-              architecto expedita officia eos rem illo nihil at corrupti
-              distinctio excepturi, accusantium modi pariatur amet? Lorem ipsum,
-              dolor sit amet consectetur adipisicing elit. Rerum perferendis
-              veniam dolorum repellat itaque accusantium laborum reprehenderit
-              dolore soluta consequuntur? Minima aperiam nostrum error autem
-              quaerat recusandae vitae dignissimos hic?
-            </p>
-            <li>
-              <button
-                data-toggle="collapse"
-                data-target="#collapseFour"
-                aria-expanded="true"
-                aria-controls="collapseFour"
-              >
-                <strong>4</strong> Como personalizar um produto?
-              </button>
-            </li>
-
-            <p
-              id="collapseFour"
-              class="collapse"
-              aria-labelledby="headingFour"
-              data-parent="#accordion"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
-              itaque mollitia necessitatibus, soluta, possimus nostrum
-              architecto expedita officia eos rem illo nihil at corrupti
-              distinctio excepturi, accusantium modi pariatur amet? Lorem ipsum,
-              dolor sit amet consectetur adipisicing elit. Rerum perferendis
-              veniam dolorum repellat itaque accusantium laborum reprehenderit
-              dolore soluta consequuntur? Minima aperiam nostrum error autem
-              quaerat recusandae vitae dignissimos hic?
-            </p>
-            <li>
-              <button
-                data-toggle="collapse"
-                data-target="#collapseFive"
-                aria-expanded="true"
-                aria-controls="collapseFive"
-              >
-                <strong>5</strong> Como personalizar um produto?
-              </button>
-            </li>
-
-            <p
-              id="collapseFive"
-              class="collapse"
-              aria-labelledby="headingFive"
-              data-parent="#accordion"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
-              itaque mollitia necessitatibus, soluta, possimus nostrum
-              architecto expedita officia eos rem illo nihil at corrupti
-              distinctio excepturi, accusantium modi pariatur amet? Lorem ipsum,
-              dolor sit amet consectetur adipisicing elit. Rerum perferendis
-              veniam dolorum repellat itaque accusantium laborum reprehenderit
-              dolore soluta consequuntur? Minima aperiam nostrum error autem
-              quaerat recusandae vitae dignissimos hic?
-            </p>
-          </ul>
-        </div>
-      </div>
-    </main>
+    </div>
 
     <footer id="footer" class="p-4">
       <div class="container-xl position-relative">
@@ -489,7 +482,6 @@
     </footer>
 
     <script src="./assets/js/jquery-3.5.1.min.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./assets/js/navbar.js"></script>
   </body>
 </html>

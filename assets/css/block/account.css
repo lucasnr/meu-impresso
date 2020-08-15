@@ -1,0 +1,56 @@
+.account-sidebar {
+  background-color: #fff;
+  border-radius: 16px;
+  color: var(--text-primary);
+  padding: 32px;
+}
+
+.account-sidebar .username {
+  color: inherit;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.account-sidebar ul li {
+  display: flex;
+}
+
+.account-sidebar ul li a {
+  padding: 8px;
+}
+
+.account-sidebar ul li a img {
+  height: 32px;
+  width: 32px;
+}
+
+.account-sidebar ul li a.active,
+.account-sidebar ul li a:hover,
+.account-sidebar ul li a:focus {
+  color: var(--color-primary);
+}
+
+.account-sidebar ul li a:not(.active) img:first-of-type {
+  display: none;
+}
+
+.account-sidebar ul li a:not(.active):hover img:first-of-type,
+.account-sidebar ul li a:not(.active):focus img:first-of-type {
+  display: inline;
+}
+
+.account-sidebar ul li a:not(.active):hover img:last-of-type,
+.account-sidebar ul li a:not(.active):focus img:last-of-type {
+  display: none;
+}
+
+.account-title {
+  font-size: 16px;
+  font-weight: 800;
+  margin: 24px 0px;
+}
+
+.account-subtitle {
+  font-size: 24px;
+  font-weight: 800;
+}

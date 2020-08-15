@@ -104,3 +104,9 @@ a:focus {
     overflow-x: scroll;
   }
 }
+
+@media (max-width: 1200px) {
+  .table-scroll-container-xl {
+    overflow-x: scroll;
+  }
+}
