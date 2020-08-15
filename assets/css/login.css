@@ -1,0 +1,44 @@
+#login-form {
+  border-radius: 16px;
+  max-width: 768px;
+}
+
+#login-form .title {
+  font-size: 16px;
+}
+
+#login-form input.form-control {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  height: auto;
+}
+
+#btn-facebook,
+#btn-google {
+  color: #fff;
+  font-weight: 600;
+}
+
+#btn-facebook {
+  background-color: #0136a6;
+}
+
+#btn-google {
+  background-color: #fe323b;
+}
+
+#login-form span {
+  font-size: 14px;
+}
+
+#login-form span a {
+  color: #0136a6;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+#new {
+  background-color: #929292;
+  color: #fff;
+  font-weight: 600;
+}
