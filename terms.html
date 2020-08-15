@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meu Impresso - Agenda</title>
+    <title>Meu Impresso - Termos de Serviço</title>
 
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
     <link
@@ -19,10 +19,7 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="stylesheet" href="./assets/css/block/topbar.css" />
     <link rel="stylesheet" href="./assets/css/block/navbar.css" />
-    <link rel="stylesheet" href="./assets/css/block/howto.css" />
     <link rel="stylesheet" href="./assets/css/block/footer.css" />
-
-    <link rel="stylesheet" href="./assets/css/product.css" />
   </head>
   <body>
     <aside id="topbar" class="p-2 border-bottom">
@@ -85,7 +82,7 @@
       </div>
     </aside>
 
-    <nav id="navbar" class="navbar position-relative border-bottom mb-2">
+    <nav id="navbar" class="navbar position-relative">
       <div class="container-xl">
         <a
           href="./index.html"
@@ -141,7 +138,7 @@
               <ul class="tab-list">
                 <li><a href="#">Cartão de visita</a></li>
                 <li><a href="#">Papel timbrado</a></li>
-                <li><a href="#">Agendas</a></li>
+                <li><a href="./product.html">Agendas</a></li>
                 <li><a href="#">Envelopes</a></li>
                 <li><a href="#">Bloco de notas</a></li>
                 <li><a href="#">Pasta</a></li>
@@ -219,251 +216,62 @@
       </div>
     </nav>
 
-    <main>
-      <section id="product" class="px-3 py-5">
-        <div class="container-xl">
-          <div class="row">
-            <div class="col-md-5 mb-4 mb-md-0">
-              <div class="pl-4 mb-5">
-                <h1 id="product-name" class="mb-0 mt-3">Agenda</h1>
-                <h2 id="product-code">Cod. AG0001</h2>
-              </div>
+    <main class="bg-custom-primary mb-3 py-5">
+      <div class="container-xl">
+        <div class="bg-white p-3 p-sm-5">
+          <h2 class="title text-left mb-5">Termos e condições</h2>
 
-              <form class="bg-white p-md-3">
-                <div class="form-group">
-                  <label for="quantidade">Quantidade:</label>
-                  <input
-                    class="form-control-sm border w-100 px-3"
-                    type="number"
-                    id="quantidade"
-                    value="1"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label for="formato">Formato:</label>
-                  <input
-                    class="form-control-sm border w-100 px-3"
-                    type="text"
-                    id="formato"
-                    value="A5 (148X210MM) VERTICAL"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label for="encadernacao">Encadernação:</label>
-                  <input
-                    class="form-control-sm border w-100 px-3"
-                    type="text"
-                    id="encadernacao"
-                    value="WIRE-O"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label for="cor">Cor da Encadernação:</label>
-                  <input
-                    class="form-control-sm border w-100 px-3"
-                    type="text"
-                    id="cor"
-                    value="PRATA"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label>Detalhes da capa</label>
-                  <label for="cores-face-capa">Cores e faces capa:</label>
-                  <input
-                    class="form-control-sm border w-100 px-3"
-                    type="text"
-                    id="cores-face-capa"
-                    value="4 X 0 - SOMENTE COLOR (MAIS VENDIDO)"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label for="laminacao">Laminação:</label>
-                  <input
-                    class="form-control-sm border w-100 px-3"
-                    type="text"
-                    id="laminacao"
-                    value="LAMINAÇÃO FOSCA"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label for="verniz">Verniz capa (opcional):</label>
-                  <input
-                    class="form-control-sm border w-100 px-3"
-                    type="text"
-                    id="verniz"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label for="corte">Corte especial (opcional):</label>
-                  <input
-                    class="form-control-sm border w-100 px-3"
-                    type="text"
-                    id="corte"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label>Detalhes do miolo</label>
-                  <label for="cores-face-miolo">Cores e face miolo:</label>
-                  <input
-                    class="form-control-sm border w-100 px-3"
-                    type="text"
-                    id="cores-face-miolo"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label for="papel-miolo">Papel miolo:</label>
-                  <input
-                    class="form-control-sm border w-100 px-3"
-                    type="text"
-                    id="papel-miolo"
-                  />
-                </div>
-              </form>
-            </div>
-
-            <div class="col-md-7">
-              <div
-                id="product-image-container"
-                class="bg-white position-relative p-3 d-flex align-items-center justify-content-center"
-              >
-                <img src="./assets/img/product.png" alt="Agenda" />
-                <button
-                  class="btn btn-lg btn-custom-primary rounded-pill py-3 text-uppercase position-absolute"
-                >
-                  Personalize o produto
-                </button>
-              </div>
-
-              <div class="row mt-5 pt-3">
-                <div class="col-sm-6">
-                  <h3 class="product-subtitle">
-                    Resumo da compra
-                  </h3>
-                  <ul class="list-unstyled mt-3">
-                    <li><strong>Quantidade: </strong><span>1</span></li>
-                    <li><strong>Formato: </strong><span>A5</span></li>
-                    <li><strong>Encadernação: </strong><span>Wire-o</span></li>
-                    <li>
-                      <strong>Cor da Encadernação: </strong><span>Prata</span>
-                    </li>
-                    <li><strong>Cores da capa: </strong><span>4x0</span></li>
-                    <li><strong>Laminação: </strong><span>Fosca</span></li>
-                  </ul>
-                </div>
-                <div class="col-sm-6 d-flex flex-column">
-                  <h3 class="product-subtitle">
-                    Enviar arquivo
-                  </h3>
-                  <button
-                    class="flex-grow-1 mt-2 p-4 bg-transparent border rounded d-flex align-items-center justify-content-center"
-                  >
-                    <img
-                      src="./assets/img/icons/upload.png"
-                      alt="Ícone de upload"
-                    />
-                  </button>
-                </div>
-              </div>
-
-              <div class="text-right mt-3">
-                <a
-                  href="./cart.html"
-                  class="btn btn-custom-secondary text-uppercase px-4 rounded-pill"
-                >
-                  Comprar o produto
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="px-3 mb-5" id="details">
-        <div class="container-xl border border-dark">
-          <h3
-            id="details-title"
-            class="text-uppercase font-weight-bold p-3 mb-0"
-          >
-            Detalhes do pedido
-          </h3>
-
-          <div class="p-3">
-            <p class="mb-4">
-              Além de ser um produto muito útil no ambiente corporativo, pode
-              ser personalizado com a identidade da sua empresa e ser
-              distríbuida para colaboradores ou clientes. Aqui você pode enviar
-              o arquivo que deseja para a capa de sua agenda. O miolo e as
-              outras características do produto continuarão conforme o padrão
-              descrito em Mais informações, logo abaixo.
+          <section class="mb-4">
+            <h3 class="subtitle">Introdução e definições</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+              harum officiis, provident nostrum voluptas recusandae laudantium
+              natus debitis laboriosam quis deleniti assumenda! Corporis ducimus
+              placeat totam excepturi amet quae qui.
             </p>
-            <ul class="list-unstyled font-weight-bold m-0">
-              <li>- Preço por unidade válido na compra de 1.000 unidades</li>
-              <li>- Tamanho: 14,8 x 21 cm (Diária)</li>
-              <li>- Personalização da Capa: Silk</li>
-              <li>
-                - Material da capa e Encadernação: Rígido percalux e wire-o
-                preto
-              </li>
-              <li>- Layout das páginas: 352 páginas</li>
-              <li>- Enobrecimento de Capa: 1 Cor</li>
-              <li>- Área da Impressão: Centralizado</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+              recusandae quisquam dolores maxime consectetur quaerat cum
+            </p>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio,
+              nemo repellat aliquam voluptate quasi reprehenderit similique
+              obcaecati iusto deleniti molestias non pariatur ipsum voluptas
+              quia modi quam porro excepturi eum? Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Corporis est laboriosam ipsa iste
+              cupiditate necessitatibus quibusdam voluptate optio eius.
+              Praesentium amet, illum aliquid ullam eum autem nihil. Recusandae,
+              distinctio quasi! Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Odio officiis dolorum, nam laborum id dolorem
+              tenetur voluptate blanditiis perferendis laudantium harum
+              cupiditate temporibus maiores rem ducimus! Earum repellat dolores
+              suscipit? Lorem, ipsum dolor sit amet consectetur adipisicing
+              elit. Tempore, quo enim doloribus recusandae a, eum, sint corporis
+              repudiandae maxime deserunt quae. Accusamus beatae, corrupti
+              excepturi repudiandae vitae autem molestiae consequuntur?
+            </p>
+          </section>
 
-      <div class="container-xl" id="howto-container">
-        <section id="howto" class="border mx-3 px-4 px-lg-5 py-5 mb-4">
-          <h2 class="title">Como personalizar?</h2>
-          <div class="row">
-            <div class="col-sm-6 col-md-3 p-0">
-              <img
-                src="./assets/img/howto/PASSO-1.png"
-                alt="Passo 1"
-                class="img-fluid"
-              />
-              <h4 class="d-none">Escolha o produto que deseja personalizar</h4>
-            </div>
-            <div class="col-sm-6 col-md-3 p-0">
-              <img
-                src="./assets/img/howto/PASSO-2.png"
-                alt="Passo 2"
-                class="img-fluid"
-              />
-              <h4 class="d-none">Personalize com a sua marca</h4>
-            </div>
-            <div class="col-sm-6 col-md-3 p-0">
-              <img
-                src="./assets/img/howto/PASSO-3.png"
-                alt="Passo 3"
-                class="img-fluid"
-              />
-              <h4 class="d-none">
-                Gostou do resultado? Hora de finalizar o pedido
-              </h4>
-            </div>
-            <div class="col-sm-6 col-md-3 p-0">
-              <img
-                src="./assets/img/howto/PASSO-4.png"
-                alt="Passo 4"
-                class="img-fluid"
-              />
-              <h4 class="d-none">
-                Verifique se recebeu o e-mail de confirmação de pagamento e
-                agora é só acompanhar pelo site
-              </h4>
-            </div>
-          </div>
-        </section>
+          <section>
+            <h3 class="subtitle">Termos, site e informações pessoais</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus aspernatur fugit delectus mollitia cupiditate
+              accusantium sit. Deserunt sed modi consequatur incidunt eum qui,
+              dolorum cupiditate, temporibus tempora dicta facere suscipit!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+              maxime accusamus cumque asperiores rerum. Commodi deserunt eveniet
+              officia similique blanditiis repellendus assumenda, corporis
+              laboriosam nostrum odit ratione unde corrupti est.
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+              perferendis doloremque dicta itaque repellendus sapiente aperiam
+              eius! Minus molestiae blanditiis ut facere natus. Quaerat
+              similique autem debitis? Rem, iusto. Voluptatum.
+            </p>
+          </section>
+        </div>
       </div>
     </main>
 
