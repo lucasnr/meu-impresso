@@ -1,0 +1,12 @@
+main {
+  font-size: 14px;
+}
+
+.delete-button {
+  background-color: var(--color-danger);
+  border-radius: 50%;
+  border: none;
+  height: 48px;
+  outline: none;
+  width: 48px;
+}
